@@ -1,11 +1,12 @@
-//===- ResetAnonymousNamespace.cpp ----------------------------------------===//
+//===- JumboSupport.cpp ---------------------------------------------------===//
 //
 // Clang plugin that adds
 //
-//   #pragma reset_anonymous_namespace
+//   #pragma jumbo
 //
-// which resets the anonymous namespace, as if a new translation unit was being
-// processed.
+// which resets the anonymous namespace after each #include from the top-level
+// source file, as if a new translation unit was being processed. It also
+// undefines macros that were defined in top-level source files.
 //
 //===----------------------------------------------------------------------===//
 
